@@ -111,6 +111,8 @@ submitForm.addEventListener("submit", (e) => {
   getRecipes(searchValue);
   veganBtn.classList.remove("bg-indigo-600");
   PaleoBtn.classList.remove("bg-indigo-600");
+  gfBtn.classList.remove("bg-indigo-600");
+
 });
 
 // FORM VALIDATION
@@ -236,6 +238,7 @@ veganBtn.addEventListener("click", () => {
   console.log("Vegan Diet");
 
   PaleoBtn.classList.remove("bg-indigo-600");
+  gfBtn.classList.remove("bg-indigo-600");
   veganBtn.classList.toggle("bg-indigo-600");
   content.innerHTML = "";
   getVeganRecipe();
@@ -301,6 +304,7 @@ PaleoBtn.addEventListener("click", () => {
 
   // Handling button select color
   veganBtn.classList.remove("bg-indigo-600");
+  gfBtn.classList.remove("bg-indigo-600");
   PaleoBtn.classList.toggle("bg-indigo-600");
 
   content.innerHTML = "";
