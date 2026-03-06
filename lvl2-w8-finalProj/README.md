@@ -1,5 +1,8 @@
 # Final Project
 
+### How to run
+- Start a live server for index.html
+
 ## Recipe Finder
 
 ---
