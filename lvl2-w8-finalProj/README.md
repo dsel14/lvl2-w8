@@ -28,6 +28,7 @@
 ---
 
 ## Project Structure
+```
 recipe-finder/
 │
 ├── index.html 
@@ -39,3 +40,4 @@ recipe-finder/
 ├── concerns.js
 │
 └── README.md
+```
