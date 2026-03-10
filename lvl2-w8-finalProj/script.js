@@ -83,8 +83,10 @@ async function getRecipes(searchValue) {
 
         // || [] , Basically just a placeholder if there's no items in favorites, then spit out an empty array
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        favorites.push(recipe);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        if (!favorites.some((fav) => fav.id === recipe.id)) {
+          favorites.push(recipe);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+        }
 
         alert("Saved to favorites!");
       });
@@ -112,7 +114,6 @@ submitForm.addEventListener("submit", (e) => {
   veganBtn.classList.remove("bg-indigo-600");
   PaleoBtn.classList.remove("bg-indigo-600");
   gfBtn.classList.remove("bg-indigo-600");
-
 });
 
 // FORM VALIDATION
@@ -224,8 +225,10 @@ async function getVeganRecipe() {
 
         // || [] , Basically just a placeholder if there's no items in favorites, then spit out an empty array
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        favorites.push(recipe);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        if (!favorites.some((fav) => fav.id === recipe.id)) {
+          favorites.push(recipe);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+        }
 
         alert("Saved to favorites!");
       });
@@ -288,8 +291,10 @@ async function getPaleoBtn() {
 
         // || [] , Basically just a placeholder if there's no items in favorites, then spit out an empty array
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        favorites.push(recipe);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        if (!favorites.some((fav) => fav.id === recipe.id)) {
+          favorites.push(recipe);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+        }
 
         alert("Saved to favorites!");
       });
@@ -354,8 +359,10 @@ async function getGfBtn() {
 
         // || [] , Basically just a placeholder if there's no items in favorites, then spit out an empty array
         const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
-        favorites.push(recipe);
-        localStorage.setItem("favorites", JSON.stringify(favorites));
+        if (!favorites.some((fav) => fav.id === recipe.id)) {
+          favorites.push(recipe);
+          localStorage.setItem("favorites", JSON.stringify(favorites));
+        }
 
         alert("Saved to favorites!");
       });
